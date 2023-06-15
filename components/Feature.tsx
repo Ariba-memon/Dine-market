@@ -23,11 +23,11 @@ export default function Feature() {
           </p>
         </div>
 
-        <div className="flex flex-row grid grid-cols-4 gap-1 space-y-2 ">
+        <div className="flex flex-row grid grid-cols-4   ">
           <div>
             <h4 className=" text-start m-8 p-2 text-lg font-sans font-semibold ">
               Using Good Quality Materials
-              <p className="m-2 mt-4 p-2 text-lg font-sans font-normal text-justify">
+              <p className=" tracking-tight m-2 mt-4 p-2 text-lg font-sans font-normal text-justify">
                 Lorem ipsum dolor adipisicing elit. Dolorum
               </p>
             </h4>

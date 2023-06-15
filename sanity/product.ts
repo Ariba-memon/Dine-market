@@ -30,10 +30,10 @@ export const product ={
             name:"category",
             title:"Product Category",
             type:"reference",
-            to:[ 
+        to:[ 
                 {
                 type: "category"
-            }
+            },
             
         ]
         })
