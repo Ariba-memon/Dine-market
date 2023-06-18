@@ -47,7 +47,7 @@ export default function SecondSection() {
           PRODUCTS
         </p>
         <h2 className="font-bold text-center text-2xl">Check What We Have</h2>
-        <div className=" flex m-20 ">
+        <div className=" flex m-20 space-x-4 ">
           <div>
             <Image
               className="m-5  hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
@@ -95,7 +95,7 @@ export default function SecondSection() {
           PRODUCTS
         </p>
         <h2 className="font-bold text-center text-2xl">Latest Designs</h2>
-        <div className="flex m-20">
+        <div className="flex m-20 space-x-4 ">
           <div>
             <Image
               className="m-5 object-contain w-380 h-400 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"

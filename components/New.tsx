@@ -1,5 +1,8 @@
+'use client'
 import Image from 'next/image'
+
 import { client } from '../lib/sanityClient'
+import { urlForImage } from '../sanity/lib/image'
 import { Image as IImage } from 'sanity'
 export const getProductData = async () => {
   const res = await client.fetch(`*[_type=="product"]{
@@ -25,15 +28,21 @@ interface IProduct {
   }
 }
 
-export default async function Male() {
+export default async function New() {
   const data: IProduct[] = await getProductData()
 
   return (
     <>
       <div>
         {data.map((item) => (
+          // eslint-disable-next-line react/jsx-key
           <div>
-            <Image src={} alt="product" />
+            <Image
+              width={300}
+              height={300}
+              src={urlForImage(item.image).url()}
+              alt="product"
+            />
           </div>
         ))}
       </div>
