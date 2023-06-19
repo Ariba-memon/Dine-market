@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import { client } from '../../lib/sanityClient'
@@ -7,19 +7,6 @@ import { urlForImage } from '../../sanity/lib/image'
 import { Image as IImage } from 'sanity'
 
 import Navbar from '../../components/Navbar'
-
-export const getProductData = async () => {
-  const res = await client.fetch(`*[_type=="product"]{
-    price,
-    _id,
-    title,
-    image,
-    category -> {
-      name
-    }
-  }`)
-  return res
-}
 
 interface IProduct {
   title: string
@@ -33,9 +20,22 @@ interface IProduct {
 }
 
 export default function New() {
-  const [data, setData] = React.useState<IProduct[]>([])
+  const [data, setData] = useState<IProduct[]>([])
 
-  React.useEffect(() => {
+  const getProductData = async () => {
+    const res = await client.fetch(`*[_type=="product"]{
+      price,
+      _id,
+      title,
+      image,
+      category -> {
+        name
+      }
+    }`)
+    return res
+  }
+
+  useEffect(() => {
     async function fetchData() {
       const productData = await getProductData()
       setData(productData)
@@ -59,7 +59,7 @@ export default function New() {
               />
               <h2>{item.title}</h2>
               <h3>${item.price}</h3>
-              <button className="border py-2 px-6 rounded bg-gray-900  text-white">
+              <button className="border py-2 px-6 rounded bg-gray-900 text-white">
                 Add To Cart
               </button>
             </div>

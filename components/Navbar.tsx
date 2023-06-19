@@ -26,7 +26,7 @@ export default function Navbar() {
       {/* Desktop navigation */}
       <ul className="hidden md:flex space-x-4 font-medium text-lg">
         {NavbarArray.map((item: NavbarItemType, index: number) => (
-          <li>
+          <li key={index}>
             <Link href={item.href}>{item.label}</Link>
           </li>
         ))}
@@ -45,7 +45,7 @@ export default function Navbar() {
       {/* Cart icon */}
       <div className="relative flex w-11 h-10 bg-gray-300 rounded-full items-center justify-center">
         <div className="flex justify-center items-center w-4 h-4 rounded-full absolute top-1 right-2 bg-red-400 text-xs font-light ">
-         0
+          0
         </div>
         <BsCart2 size={24} />
       </div>
@@ -55,7 +55,7 @@ export default function Navbar() {
         <div className="md:hidden absolute top-20 left-0 right-0 bg-white rounded-b-lg shadow-lg px-4 py-2">
           <ul className="flex flex-col space-y-2">
             {NavbarArray.map((item: NavbarItemType, index: number) => (
-              <li>
+              <li key={index}>
                 <Link href={item.href} className="text-gray-600">
                   {item.label}
                 </Link>
