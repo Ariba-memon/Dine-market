@@ -16,7 +16,6 @@ interface IProduct {
   image: IImage
   price: number
   category: {
-    Male: string
     name: string
   }
 }
@@ -25,15 +24,13 @@ export default function New() {
   const [data, setData] = useState<IProduct[]>([])
 
   const getProductData = async () => {
-    const res = await client.fetch(`*[_type=="category" ]{
+    const res = await client.fetch(`*[_type=="Product" ]{
       price,
       _id,
       title,
       image,
       category -> {
-        "category": category->name->{
-          "Male": Male
-        }
+        
       }
     }`)
     return res
@@ -55,7 +52,6 @@ export default function New() {
           item.image ? (
             <div key={item._id}>
               <ProductCart item={item} />
-              {item.category.Male} {/* Display the Male property */}
             </div>
           ) : null,
         )}

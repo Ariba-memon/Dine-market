@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Feature from './Feature'
+import Product from './Product'
 export default function SecondSection() {
   return (
     <>
+      <Product />
       <div>
         <p className="m-2 text-sky-900 justify-items-center text-xs text-center items-center leading-3">
           PROMOTIONS
