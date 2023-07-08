@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Feature from './Feature'
+import Link from 'next/link'
+import { catebar } from '../app/catebar/slug'
 
 export default function SecondSection() {
   return (
@@ -50,18 +52,21 @@ export default function SecondSection() {
         <h2 className="font-bold text-center text-2xl">Check What We Have</h2>
         <div className=" flex m-20 space-x-4 ">
           <div>
-            <Image
-              className="m-5  hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
-              src={'/image3.png'}
-              alt="heroimg"
-              width={380}
-              height={400}
-            />
-            <p className="m-7 text-lg font-sans font-semibold text-justify">
-              Brushed Ranglan Sweatshirt
-              <br />
-              $195
-            </p>
+            <Link href={'catebar/slug'}>
+              <Image
+                className="m-5  hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
+                src={'/image3.png'}
+                alt="heroimg"
+                width={380}
+                height={400}
+              />
+
+              <p className="m-7 text-lg font-sans font-semibold text-justify">
+                Brushed Ranglan Sweatshirt
+                <br />
+                $195
+              </p>
+            </Link>
           </div>
           <div>
             <Image
