@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Feature from './Feature'
 import Link from 'next/link'
-import { catebar } from '../app/catebar/slug'
+import { catebar } from '../app/catebar/[slug]'
 
 export default function SecondSection() {
   return (
@@ -52,7 +52,7 @@ export default function SecondSection() {
         <h2 className="font-bold text-center text-2xl">Check What We Have</h2>
         <div className=" flex m-20 space-x-4 ">
           <div>
-            <Link href={'catebar/slug'}>
+            <Link href={'/catebar/[slug]?slug=1'}>
               <Image
                 className="m-5  hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
                 src={'/image3.png'}

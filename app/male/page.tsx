@@ -54,9 +54,6 @@ export default async function Home() {
             />
             <h2>{item.title}</h2>
             <h3>{item.price}</h3>
-            <button className="border py-2 px-6 rounded bg-gray-900 text-white">
-              Add To Cart
-            </button>
           </div>
         ))}
       </div>
