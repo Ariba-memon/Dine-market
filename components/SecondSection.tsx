@@ -2,7 +2,11 @@ import Image from 'next/image'
 import Feature from './Feature'
 import Link from 'next/link'
 import { catebar } from '../app/catebar/[slug]'
-
+import { catebarnew } from '../app/catebarnew'
+import { catebarnew1 } from '../app/catebarnew1'
+import { catebarnew3 } from '../app/catebarnew3'
+import { catebar4 } from '../app/catebar4'
+import { catebar5 } from '../app/catebar5'
 export default function SecondSection() {
   return (
     <>
@@ -69,32 +73,37 @@ export default function SecondSection() {
             </Link>
           </div>
           <div>
-            <Image
-              className="m-5 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
-              src={'/image4.png'}
-              alt="heroimg"
-              width={380}
-              height={400}
-            />
-            <p className="m-7 text-lg font-sans font-semibold text-justify">
-              Flex Sweatshirt
-              <br />
-              $175
-            </p>
+            <Link href={'/catebarnew'}>
+              <Image
+                className="m-5 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
+                src={'/image4.png'}
+                alt="heroimg"
+                width={380}
+                height={400}
+              />
+              <p className="m-7 text-lg font-sans font-semibold text-justify">
+                Flex Sweatshirt
+                <br />
+                $175
+              </p>
+            </Link>
           </div>
+
           <div>
-            <Image
-              className="m-5 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
-              src={'/image5.png'}
-              alt="heroimg"
-              width={380}
-              height={400}
-            />
-            <p className="m-7 text-lg font-sans font-semibold text-justify">
-              Flex SweatPants
-              <br />
-              $175
-            </p>
+            <Link href={'/catebarnew1'}>
+              <Image
+                className="m-5 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
+                src={'/image5.png'}
+                alt="heroimg"
+                width={380}
+                height={400}
+              />
+              <p className="m-7 text-lg font-sans font-semibold text-justify">
+                Flex SweatPants
+                <br />
+                $175
+              </p>
+            </Link>
           </div>
         </div>
         <p className="m-2 text-sky-900 justify-items-center text-xs text-center items-center leading-3">
@@ -103,46 +112,53 @@ export default function SecondSection() {
         <h2 className="font-bold text-center text-2xl">Latest Designs</h2>
         <div className="flex m-20 space-x-4 ">
           <div>
-            <Image
-              className="m-5 object-contain w-380 h-400 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
-              src={'/image1.png'}
-              alt="heroimg"
-              width={380}
-              height={400}
-            />
-            <p className="m-7 text-lg font-sans font-semibold text-justify">
-              Flex Sweat
-              <br />
-              $175
-            </p>
+            <Link href={'/catebarnew3'}>
+              <Image
+                className="m-5 object-contain w-380 h-400 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
+                src={'/image1.png'}
+                alt="heroimg"
+                width={380}
+                height={400}
+              />
+              <p className="m-7 text-lg font-sans font-semibold text-justify">
+                Flex Sweat
+                <br />
+                $175
+              </p>
+            </Link>
           </div>
           <div>
-            <Image
-              className="m-5 object-contain hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
-              src={'/lite.png'}
-              alt="heroimg"
-              width={380}
-              height={400}
-            />
-            <p className="m-7 text-lg font-sans font-semibold text-justify">
-              Flex Lite Pant
-              <br />
-              $195
-            </p>
+            <Link href={'/catebar4'}>
+              <Image
+                className="m-5 object-contain hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
+                src={'/lite.png'}
+                alt="heroimg"
+                width={380}
+                height={400}
+              />
+              <p className="m-7 text-lg font-sans font-semibold text-justify">
+                Flex Lite Pant
+                <br />
+                $195
+              </p>
+            </Link>
           </div>
+
           <div>
-            <Image
-              className="m-5 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
-              src={'/brushed.png'}
-              alt="heroimg"
-              width={380}
-              height={400}
-            />
-            <p className="m-7 text-lg font-sans font-semibold text-justify">
-              Muscle Tank
-              <br />
-              $95
-            </p>
+            <Link href={'/catebar5'}>
+              <Image
+                className="m-5 hover:shadow-2xl  transition duration-300 ease-in-out hover:scale-110"
+                src={'/brushed.png'}
+                alt="heroimg"
+                width={380}
+                height={400}
+              />
+              <p className="m-7 text-lg font-sans font-semibold text-justify">
+                Muscle Tank
+                <br />
+                $95
+              </p>
+            </Link>
           </div>
         </div>
         <div>

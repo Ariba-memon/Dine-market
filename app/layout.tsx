@@ -1,5 +1,7 @@
+import Providers from '../components/Provider'
 import './globals.css'
 import { Maven_Pro } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
 
 const inter = Maven_Pro({
   subsets: ['latin'],
@@ -18,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ClerkProvider>
+        <Providers>
+          <body className={inter.className}>{children}</body>
+        </Providers>
+      </ClerkProvider>
     </html>
   )
 }

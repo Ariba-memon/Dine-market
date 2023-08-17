@@ -14,14 +14,14 @@
 // export default page
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { client } from '../../../lib/sanityClient'
-import { urlForImage } from '../../../sanity/lib/image'
+import { client } from '../../lib/sanityClient'
+import { urlForImage } from '../../sanity/lib/image'
 import { Image as IImage } from 'sanity'
-import Navbar from '../../../components/Navbar'
-import ProductCart from '../../ProductCart'
-import Footer from '../../../components/Footer'
-import Quantity from '../../../components/Quantity'
-import AddToCart from '../../../components/AddtoCart'
+import Navbar from '../../components/Navbar'
+import ProductCart from '../ProductCart'
+import Footer from '../../components/Footer'
+import Quantity from '../../components/Quantity'
+import AddToCart from '../../components/AddtoCart'
 
 interface IProduct {
   title: string
@@ -35,7 +35,7 @@ interface IProduct {
 }
 
 export const getProductData = async () => {
-  const res = await client.fetch(`*[_type=="product" ][7]{
+  const res = await client.fetch(`*[_type=="product" ][6]{
     price,
     _id,
     title,
